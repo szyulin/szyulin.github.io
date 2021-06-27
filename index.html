@@ -7,27 +7,30 @@
 
 <style>
     body {
-        font-family:Verdana,sans-serif;font-size:0.8em;
+        font-family:Verdana,sans-serif;font-size:0.9em;
     }
     header,footer,section,article {
-        border:0px solid grey;
-        margin:5px;margin-bottom:15px;padding:8px;
-        background-color:white;
+        border:0px solid rgb(96, 220, 241);
+        margin:30px;margin-bottom:15px;padding:8px;
+        background-color:rgb(100, 164, 168);
     }
     header,footer {
-        color:white;background-color:#666;margin-bottom:5px;
+        color:white;background-color:rgb(3, 111, 119);margin-bottom:5px;
     }
     section {
-        background-color:#888;
+        background-color:rgb(33, 111, 119);
     }
     nav ul  {
-        margin:0;padding:0;
+        margin:10;padding:10;display: flex;
     }
     nav ul li {
-        display:inline; margin:5px;
+        display:inline; margin:15px;
     }
     picture{
         width: 800px;
+    }
+    body section aside{
+        display: inline;
     }
     
 </style>
@@ -35,7 +38,7 @@
 <body>
 
     <header>
-        <h1><img src="./images/icon_YL.png">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWeb Online Tools</h1>
+        <h1><img src="./images/YL.png" width="40px" height="40px">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWeb Online Tools</h1>
     </header>
 
     <nav>
@@ -47,33 +50,35 @@
     </nav>
 
     <section>
-        <h2>Latest Tools</h2>
-        
         <article>
         <h2>Online Barcode Generator</h2>
         <p>Create your own barcodes. You can print or save as
              JPG, GIF, ZIP or PDF. Your barcode is free of charge 
              and quickly generated. It´s easy.</p>
-        <img class="picture" src="./images/barcode.PNG" alt="barcode">
+        <div align=center><img class="picture" src="./images/barcode.PNG" alt="barcode"></div>
         <p><a href="https://www.barcode-generator.de/V2/en/index.jsp">online barcode generator V2</a></p>
         <p><a href="https://server15.barcode-generator.de/v4/">online barcode generator V4</a></p>
         </article>
-        
+    </section>
+    
+    <section>
         <article>
         <h2>Remove Image Background</h2>
         <p>Remove backgrounds 100% automatically in 5 seconds with zero clicks
             There are approximately 20 million more interesting activities than removing backgrounds by hand.
             Thanks to remove.bg's clever AI, you can slash editing time - and have more fun!.</p>
-        <img class="picture" src="./images/removebackground.PNG" alt="removebackground">
+        <div align=center><img class="picture" src="./images/removebackground.PNG" alt="removebackground"></div>
         <p><a href="https://www.remove.bg/">Remove Image Background</a></p>
         </article>
-
+    </section>
+    
+    <section>
         <article>
             <h2>diagrams.net</h2>
             <p>diagrams.net is an open source technology stack for building diagramming applications, 
                 and the world’s most widely used browser-based end-user diagramming software.</p>
             <p>provide free, high quality diagramming software for everyone</p>
-            <img class="picture" src="./images/diagram.PNG" alt="diagrams.net">
+            <div align=center><img class="picture" src="./images/diagram.PNG" alt="diagrams.net"></div>
             <p><a href="https://www.diagrams.net/">diagrams.net</a></p>
         </article>
         
