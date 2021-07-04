@@ -1,45 +1,39 @@
 
-    body {
-        font-size: 16px;
-        color: #000;
-        /* margin: 0;
-        padding: 0; */
-        position: relative;
-        height: 100%;
-        font-family: "Whitney,Helvetica Neue,Helvetica,Arial,sans-serif,Microsoft YaHei";
-        /* line-height: 25px; */
-        /* display: block; */
-    }
-    .header{
-        height: 60px;
-        width: 100%;
-        position: fixed;
-        transition: 0.1s;
-        top: 0;
-        z-index: 99;
-        /* color: #fff; */
-        /* background-color: rgba(255,255,255,0.2); */
-    }
-    .logo, .title, .link{
-        float: left;
-        background-color: rgba(255,255,255,0.2);
-    }
-    
-    header,footer,div,article {
-        margin:10px;margin-bottom:15px;padding:8px;
-    }
-    .header,.footer {
-        color:black;display:flex;
-    }
-    div {
-        background-color:#ffffff;
-    }
-    nav ul  {
-        margin:10;padding:10;display: flex;
-    }
-    nav ul li {
-        display:inline; margin:5px;
-    }
-    picture{
-        width: 800px;
-    }
+.header{
+    margin: auto;
+    display: flex;
+}
+
+ul {
+    list-style-type: none;
+    margin: 10px;
+    margin-left: 200px;
+    padding: 10px;
+  }
+  
+  li {
+    float: left;
+    width: 80px;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* 当鼠标悬停时把链接颜色更改为 #111（黑色） */
+  li a:hover {
+    background-color: #888;
+  }
+
+  .banner-1 {
+      width: 100%;
+  }
+
+  .content {
+    margin: 20px;
+    padding: 10px;
+  }
