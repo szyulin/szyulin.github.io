@@ -36,6 +36,12 @@ ul {
 .content {
     margin: 20px;
     padding: 10px;
+    /* border: 1px solid #000; */
+    border-radius: 20px;
+    background: linear-gradient(to right bottom,rgba(255,255,255,0.6),rgba(255,255,255,0.1));
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
+    border-top: 1px solid rgba(255,255,255,0.8);
+    border-left: 1px solid rgba(255,255,255,0.8);
   }
 
 .gallery {
@@ -50,4 +56,13 @@ ul {
     margin: 5px;
     padding: 5px;
     border-radius: 18px;
+}
+
+h2{
+  padding-left: 30px;
+  padding-right:30px;
+}
+
+p {
+  padding-left: 50px;
 }
