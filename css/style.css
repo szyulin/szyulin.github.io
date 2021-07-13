@@ -8,15 +8,16 @@ ul {
     list-style-type: none;
     margin: 10px;
     margin-left: 200px;
-    padding: 10px;
+    padding: 5px;
   }
   
   li {
     float: left;
-    width: 150px;
+    width: 100px;
   }
   
   li a {
+    font-size: 16px;
     display: block;
     color: black;
     text-align: center;
@@ -26,7 +27,7 @@ ul {
   
   /* 当鼠标悬停时把链接颜色更改为 #111（黑色） */
   li a:hover {
-    background-color: #666;
+    background-color: #538ffd;
   }
 
 .banner-1 {
@@ -66,3 +67,4 @@ h2{
 p {
   padding-left: 50px;
 }
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       .box{
+           width: 500px;
+           border: 1px solid red;
+           margin: 0 auto;
+           
+       }
+       .review{
+           height: 250px;
+           background-color: blanchedalmond;
+       }
+       #uu{
+           background-color: cyan;
+       }
+       #uu li{
+           list-style: none;
+       }
+    </style>
+
+</head>
+<body>
+  <!-- 点击提交，将输入框文中添加到显示留言下，并清空文本框 -->
+  <div class="box">
+    <div class="review">
+    姓名：<input type="text" id="names"><br>
+    内容：<textarea name="" cols="30" rows="10" id="concent"></textarea>
+    &emsp;&emsp;<button onclick="add()">提交</button>
+    </div>
+    <div class="show">
+    <h3>显示留言</h3><br>
+    <ul id="uu">
+        <li>
+            张三
+            <p>我要好好工作<a href="#" onclick="del(this)">删除</a></p>
+        </li>
+    </ul>
+</div>
+</div>
+
+<script>
+    //获取元素
+    var use = document.getElementById('names');
+    var concent = document.getElementById('concent');
+    var uu = document.getElementById('uu');
+
+    //显示用户输入内容
+    //当我们点击添加的时候触发这个函数 如果名字或者内容为空直接提示并且返回
+    function add(){
+        if(use.value == '' || concent.value == ''){
+            alert('请输入内容');
+            return;
+        }
+
+        //创建一个元素li
+        var li = document.createElement('li');
+        //给添加用户输入的内容
+        li.innerHTML = use.value + '<p>' + concent.value + '<a href="#" οnclick="del(this)">删除</a>';
+        uu.appendChild(li);
+
+        use.value = '';
+        concent.value = '';
+    }
+    //this指得是当前对象
+    function del(e){
+        e.parentElement.parentElement.remove();
+    }
+    
+</script>
+
+</body>
+</html>
