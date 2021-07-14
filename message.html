@@ -1,83 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Message</title>
 
     <style>
-        *{
+        /* *{
             margin: 0;
             padding: 0;
+        } */
+        .box {
+            width: 500px;
+            border: 1px solid red;
+            margin: 0 auto;
+
         }
-       .box{
-           width: 500px;
-           border: 1px solid red;
-           margin: 0 auto;
-           
-       }
-       .review{
-           height: 250px;
-           background-color: blanchedalmond;
-       }
-       #uu{
-           background-color: cyan;
-       }
-       #uu li{
-           list-style: none;
-       }
+
+        .review {
+            height: 250px;
+            background-color: blanchedalmond;
+        }
+
+        #uu {
+            background-color: cyan;
+        }
+
+        #uu li {
+            list-style: none;
+        }
     </style>
 
 </head>
+
 <body>
-  <!-- 点击提交，将输入框文中添加到显示留言下，并清空文本框 -->
-  <div class="box">
-    <div class="review">
-    姓名：<input type="text" id="names"><br>
-    内容：<textarea name="" cols="30" rows="10" id="concent"></textarea>
-    &emsp;&emsp;<button onclick="add()">提交</button>
+    <div class="header">
+        <div class="logo"><img src="./images/YL.png" height="50px" width="50px"></div>
+        <div class="title">
+            <h3>Web Online Tools</h3>
+        </div>
+        <div class="link">
+            <ul>
+                <li><a href="https://szyulin.github.io/index.html"> Home</a></li>
+                <li><a href="https://szyulin.github.io/message.html">Contact</a></li>
+                <li><a href="https://szyulin.github.io/about.html">About</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="show">
-    <h3>显示留言</h3><br>
-    <ul id="uu">
-        <li>
-            张三
-            <p>我要好好工作<a href="#" onclick="del(this)">删除</a></p>
-        </li>
-    </ul>
-</div>
-</div>
 
-<script>
-    //获取元素
-    var use = document.getElementById('names');
-    var concent = document.getElementById('concent');
-    var uu = document.getElementById('uu');
+    <div class="banner">
+        <div class="swiper">
+            <img class="banner-1" src="./images/banner-1.png" alt="">
+        </div>
+    </div>
 
-    //显示用户输入内容
-    //当我们点击添加的时候触发这个函数 如果名字或者内容为空直接提示并且返回
-    function add(){
-        if(use.value == '' || concent.value == ''){
-            alert('请输入内容');
-            return;
+    <!-- 点击提交，将输入框文中添加到显示留言下，并清空文本框 -->
+    <div class="box">
+        <div class="review">
+            姓名：<input type="text" id="names"><br>
+            内容：<textarea name="" cols="30" rows="10" id="concent"></textarea>
+            &emsp;&emsp;<button onclick="add()">提交</button>
+        </div>
+        <div class="show">
+            <h3>显示留言</h3><br>
+            <ul id="uu">
+                <li>
+                    张三
+                    <p>我要好好工作<a href="#" onclick="del(this)">删除</a></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div align=center>
+            <p>© 2021 WebOnlineTools. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        //获取元素
+        var use = document.getElementById('names');
+        var concent = document.getElementById('concent');
+        var uu = document.getElementById('uu');
+
+        //显示用户输入内容
+        //当我们点击添加的时候触发这个函数 如果名字或者内容为空直接提示并且返回
+        function add() {
+            if (use.value == '' || concent.value == '') {
+                alert('请输入内容');
+                return;
+            }
+
+            //创建一个元素li
+            var li = document.createElement('li');
+            //给添加用户输入的内容
+            li.innerHTML = use.value + '<p>' + concent.value + '<a href="#" οnclick="del(this)">删除</a>';
+            uu.appendChild(li);
+
+            use.value = '';
+            concent.value = '';
+        }
+        //this指得是当前对象
+        function del(e) {
+            e.parentElement.parentElement.remove();
         }
 
-        //创建一个元素li
-        var li = document.createElement('li');
-        //给添加用户输入的内容
-        li.innerHTML = use.value + '<p>' + concent.value + '<a href="#" οnclick="del(this)">删除</a>';
-        uu.appendChild(li);
-
-        use.value = '';
-        concent.value = '';
-    }
-    //this指得是当前对象
-    function del(e){
-        e.parentElement.parentElement.remove();
-    }
-    
-</script>
+    </script>
 
 </body>
+
 </html>
