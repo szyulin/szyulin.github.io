@@ -9,28 +9,49 @@
     <title>Message</title>
 
     <style>
-        /* *{
-            margin: 0;
-            padding: 0;
-        } */
-        .box {
-            width: 500px;
-            border: 1px solid red;
-            margin: 0 auto;
-
+        .form {
+            margin: 50px;
+            border-radius: 10px;
+            background-color: #f2f2f2;
+            padding: 30px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
+            font-size: large;     
         }
 
-        .review {
-            height: 250px;
-            background-color: blanchedalmond;
+        input[type=text],[type=email]{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 12px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
         }
 
-        #uu {
-            background-color: cyan;
+        textarea {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 12px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
         }
 
-        #uu li {
-            list-style: none;
+        button[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: large;
+        }
+
+        button[type=submit]:hover {
+            background-color: #45a049;
         }
     </style>
 
@@ -57,8 +78,28 @@
         </div>
     </div>
 
+    <div class="form">
+        <form action="https://formspree.io/f/xbjqayyz" method="POST">
+            <label>
+                Your Name:
+                <input type="text" name="name">
+            </label>
+            <label>
+                Your Email:
+                <input type="email" name="email">
+            </label>
+            <label>
+                Your Message:
+                <textarea name="message"></textarea>
+            </label>
+
+            <!-- your other form fields go here -->
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
     <!-- 点击提交，将输入框文中添加到显示留言下，并清空文本框 -->
-    <div class="box">
+    <!-- <div class="box">
         <div class="review">
             姓名：<input type="text" id="names"><br>
             内容：<textarea name="" cols="30" rows="10" id="concent"></textarea>
@@ -73,7 +114,7 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
 
     <footer>
         <div align=center>
@@ -81,7 +122,7 @@
         </div>
     </footer>
 
-    <script>
+    <!-- <script>
         //获取元素
         var use = document.getElementById('names');
         var concent = document.getElementById('concent');
@@ -109,7 +150,7 @@
             e.parentElement.parentElement.remove();
         }
 
-    </script>
+    </script> -->
 
 </body>
 
