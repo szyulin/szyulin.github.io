@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播</title>
+	<style>
+		*{
+	margin: 0;
+	padding: 0;
+}
+.one img{
+	position: absolute;
+	width: 400px;
+	height:200px;
+}
+.two img{
+	position: absolute;
+	width: 400px;
+	height: 200px;
+}
+.three img{
+	position: absolute;
+	width: 400px;
+	height:200px;
+}
+.three {
+	animation-name: cantoons;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+.two {
+	animation-name: cantoons2;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+.one {
+	animation-name: cantoons1;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+@keyframes cantoons{
+	0% {
+		opacity: 1;
+	}
+	35% {
+		opacity: 0;
+	}
+	70% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+	
+}
+@keyframes cantoons2{
+	0% {
+		opacity: 0;
+	}
+	35% {
+		opacity: 1;
+	}
+	70% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+
+	}
+}
+@keyframes cantoons1{
+	0% {
+		opacity: 0;
+	}
+	35% {
+		opacity: 0;
+	}
+	70% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+
+	}
+}
+	</style>
+	
+</head>
+<body>
+	<div class="one">
+		<img src="./images/banner-1.png" alt="">
+	</div>
+	<div class="two">
+		<img src="./images/banner-2.png" alt="">	
+	</div>
+	<div class="three">
+		<img src="./images/banner-3.png" alt="">	
+	</div>
+	
+</body>
+</html>
+

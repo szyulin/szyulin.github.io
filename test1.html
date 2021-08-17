@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css实现轮播效果</title>
+	<style type="text/css">
+		.one {
+			position: absolute;
+			width: 500px;
+			height: 400px;
+			overflow: hidden;
+		}
+		.one_cantent img {
+			width: 500px;
+			height: 300px;
+			float: left;
+		}
+		.one_cantent {
+			width: 2500px;
+			height: 400px;
+			position: absolute;
+			left: 0px;
+			animation-name: move;
+			animation-duration: 10s;
+			animation-iteration-count: infinite;
+		}
+		@keyframes move {
+			0% {
+				left: 0px;
+			}
+			25% {
+				left: -500px;
+			}
+			50% {
+				left: -1000px;
+			}
+			75% {
+				left: -1500px;
+			}
+			100% {
+				left: -2000px
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="one">
+		<div class="one_cantent">
+			<img src="./images/banner-1.png">
+			<img src="./images/banner-2.png">
+			<img src="./images/banner-3.png">
+			<img src="./images/banner-1.png">
+			<img src="./images/banner-2.png">
+		</div>
+	</div>
+</body>
+</html>
