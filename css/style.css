@@ -72,3 +72,14 @@ p {
   margin-top: 50px;
 }
 
+.right {
+  margin-left: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lang{
+  margin: 0px 20px 0px 20px;
+  text-align: center;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Message</title>
+
+    <style>
+        .form {
+            margin: 50px;
+            border-radius: 10px;
+            background-color: #f2f2f2;
+            padding: 30px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
+            font-size: large;     
+        }
+
+        input[type=text],[type=email]{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 12px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 12px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: large;
+        }
+
+        button[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .preface {
+            margin: 50px;
+            border-radius: 10px;
+            background-color: #f2f2f2;
+            background-image: linear-gradient(rgba(10, 100, 125, 0.5),rgba(0, 150, 0, 0.5),rgba(200, 200, 35, 0.5));
+            padding: 30px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
+            font-size: large;
+            text-align: center;
+        }
+
+        .text {
+            letter-spacing: 2px;
+            line-height: 1.8;
+            word-spacing: 5px;
+            text-shadow: 1px 1px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="index.html"><img src="./images/log.png" ></a>
+        </div>
+        <div class="link">
+            <ul>
+                <li><a href="https://szyulin.github.io/index.html"> Home</a></li>
+                <li><a href="https://szyulin.github.io/message.html">Contact</a></li>
+                <li><a href="https://szyulin.github.io/about.html">About</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="swiper">
+            <img class="banner-1" src="./images/banner2.png" alt="">
+        </div>
+    </div>
+
+    <div class="preface">
+        <p class="text">
+            A person's energy is limited. <br>
+            If you find a good online tool website, <br>
+            or you have some suggestions, <br>
+            or you want to point out some mistakes here. <br>
+            Please contact me and send me your recommendations and suggestions. <br>
+            I will improve in time. <br>
+            Let's work together to make the world a better!
+        </p>
+    </div>
+
+    <div class="form">
+        <form action="https://formspree.io/f/xbjqayyz" method="POST">
+            <label>
+                Your Name:
+                <input type="text" name="name" placeholder="* John, Carlos, Laura *">
+            </label>
+            <label>
+                Your Email:
+                <input type="email" name="email" placeholder="* xxxxxx@gmail.com *">
+            </label>
+            <label>
+                Your Message:
+                <textarea name="message" placeholder="* some question, advice, funs  *"></textarea>
+            </label>
+
+            <!-- your other form fields go here -->
+
+            <button type="submit">Send message</button>
+        </form>
+    </div>
+    <!-- 点击提交，将输入框文中添加到显示留言下，并清空文本框 -->
+    <!-- <div class="box">
+        <div class="review">
+            姓名：<input type="text" id="names"><br>
+            内容：<textarea name="" cols="30" rows="10" id="concent"></textarea>
+            &emsp;&emsp;<button onclick="add()">提交</button>
+        </div>
+        <div class="show">
+            <h3>显示留言</h3><br>
+            <ul id="uu">
+                <li>
+                    张三
+                    <p>我要好好工作<a href="#" onclick="del(this)">删除</a></p>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+
+    <footer>
+        <div align=center>
+            <p>© 2021 WebOnlineTools. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- <script>
+        //获取元素
+        var use = document.getElementById('names');
+        var concent = document.getElementById('concent');
+        var uu = document.getElementById('uu');
+
+        //显示用户输入内容
+        //当我们点击添加的时候触发这个函数 如果名字或者内容为空直接提示并且返回
+        function add() {
+            if (use.value == '' || concent.value == '') {
+                alert('请输入内容');
+                return;
+            }
+
+            //创建一个元素li
+            var li = document.createElement('li');
+            //给添加用户输入的内容
+            li.innerHTML = use.value + '<p>' + concent.value + '<a href="#" οnclick="del(this)">删除</a>';
+            uu.appendChild(li);
+
+            use.value = '';
+            concent.value = '';
+        }
+        //this指得是当前对象
+        function del(e) {
+            e.parentElement.parentElement.remove();
+        }
+
+    </script> -->
+
+</body>
+
+</html>
