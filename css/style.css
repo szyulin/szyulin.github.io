@@ -73,13 +73,22 @@ p {
 }
 
 .right {
-  margin-left: 300px;
+  margin-left: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.lang{
-  margin: 0px 20px 0px 20px;
-  text-align: center;
+.lang {
+  margin: 0px 10px 0 10px;
+}
+
+.lang a {
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+}
+
+.lang a:hover {
+  background-color: #4d75be;
 }
