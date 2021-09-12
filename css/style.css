@@ -81,6 +81,12 @@ p {
 
 .lang {
   margin: 0px 10px 0 10px;
+  vertical-align: middle;
+}
+
+.lang img {
+  margin: 0px 10px 0 10px;
+  vertical-align: middle;
 }
 
 .lang a {
